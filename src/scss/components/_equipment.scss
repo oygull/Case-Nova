@@ -1,0 +1,327 @@
+.equipment {
+  padding: 0 0 240px 0;
+  background-image: url('../../img/equipment/ellipse.png');
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  background-size: 1400px 1250px;
+
+  &__card {
+    display: flex;
+    column-gap: 36px;
+    margin-bottom: 240px;
+
+    &-item {
+      // card title and text
+      &-info {
+        text-align: left;
+        margin-bottom: 36px;
+
+        &-title {
+          margin: 0 0 24px 0;
+          font-weight: 800;
+          font-size: 48px;
+          line-height: 50px;
+          color: #222222;
+          width: 331px;
+          max-width: 100%;
+        }
+
+        &-subtitle {
+          margin: 0;
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 28px;
+          letter-spacing: 0.32em;
+          text-transform: uppercase;
+          color: #222222;
+          width: 412px;
+          max-width: 100%;
+        }
+
+        @media only screen and (max-width: 1200px){
+          &-title{
+            font-size: 24px;
+            line-height: 30px;
+            margin-bottom: 14px;
+          }
+
+          &-subtitle{
+            font-size: 12px;
+            line-height: 20px;
+            margin-bottom: 20px;
+          }
+        }
+      }
+
+      @media only screen and (max-width: 1200px){
+        &-info{
+          width: 70%;
+        }
+      }
+
+      // card style
+      &-box {
+        position: relative;
+        background-color: #fff;
+
+        &-info {
+
+          &-title {
+            margin: 0;
+            font-weight: 700;
+            font-size: 24px;
+            line-height: 29px;
+            color: #636363;
+          }
+
+          &-subtitle {
+            margin: 0;
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 44px;
+            color: #222222;
+          }
+
+          @media only screen and (max-width: 1200px){
+            &-title{
+              font-size: 20px;
+              line-height: 20px;
+            }
+            &-subtitle{
+              font-size: 14px;
+              line-height: 17px;
+              margin-bottom: 3px;
+            }
+          }
+        }
+      }
+
+
+    }
+
+    .left {
+      width: 412px;
+      height: 600px;
+      overflow: hidden;
+
+      .left-info {
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        z-index: 1;
+      }
+    }
+
+    .center {
+      width: 412px;
+      height: 816px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .center-info {
+        position: absolute;
+        bottom: 48px;
+        left: 48px;
+        z-index: 1;
+      }
+
+      img {
+        transform: translateY(-110px);
+      }
+    }
+
+    .right {
+      margin-top: 124px;
+      width: 412px;
+      height: 692px;
+      padding-bottom: 33px;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+
+      .right-info {
+        position: absolute;
+        top: 48px;
+        left: 48px;
+        z-index: 1;
+      }
+    }
+
+    @media only screen and (max-width: 1200px){
+      .center{
+        width: 160px;
+        height: 265px;
+
+        .center-info {
+          bottom : 24px;
+          left: 24px;
+          z-index: 1;
+        }
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .left{
+        width: 160px;
+        height: 265px;
+
+        .left-info {
+          bottom: 24px;
+          left: 24px;
+          z-index: 1;
+        }
+
+        img{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .right{
+        flex-grow: 1;
+        width: 160px;
+        height: 265px;
+
+        .right-info {
+          position: absolute;
+          top: 48px;
+          left: 48px;
+          z-index: 1;
+        }
+
+        @media only screen and (max-width: 1200px){
+          .right-info {
+            top: 24px;
+            left: 24px;
+            z-index: 1;
+          }
+        }
+      }
+    }
+
+  }
+
+  @media only screen and (max-width: 1200px){
+    &__card{
+      column-gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+
+      .card_item1{
+        width: 180px;
+
+        .equipment__card-item-box{
+          width: 100%;
+          height: 100%;
+        }
+      }
+      .card_item2{
+        width: 159px;
+        height: 332px;
+
+        .equipment__card-item-box{
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .card_item3{
+        width: 159px;
+        height: 332px;
+
+        .equipment__card-item-box{
+          width: 100%;
+          height: 100%;
+          margin-top: 20px;
+          padding-bottom: 0;
+
+          img{
+            width: 128px;
+            height: 235px;
+          }
+        }
+      }
+    }
+  }
+
+  &__desc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+
+    &--title{
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 50px;
+      margin-bottom: 24px;
+      text-align: center;
+    }
+
+    &--text{
+      font-weight: 300;
+      font-size: 16px;
+      line-height: 28px;
+      letter-spacing: 0.32em;
+      margin-bottom: 25px;
+      width: 50%;
+      text-align: center;
+      text-transform: uppercase;
+    }
+
+    &--button{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      bottom: 0;
+      right: 180px;
+      cursor: pointer;
+
+      p{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        margin-right: 16px;
+        color: #222;
+      }
+    }
+
+    @media only screen and (max-width: 1200px){
+      &--title{
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 30px;
+        margin-bottom: 14px;
+      }
+
+      &--text{
+        font-size: 12px;
+        line-height: 20px;
+        margin-bottom: 5px;
+        width: 100%;
+      }
+
+      &--button{
+        bottom: -80px;
+        right: 8px;
+
+        p{
+          font-size: 12px;
+          line-height: 20px;
+        }
+
+      }
+
+    }
+  }
+}

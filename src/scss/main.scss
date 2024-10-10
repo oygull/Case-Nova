@@ -1,0 +1,26 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/hero";
+@import "./components/services";
+@import "components/equipment";
+@import "components/article";
+@import "components/questions";
+@import "components/servicetypes";
+@import "components/question_form";
+@import "components/equipment_types";
+@import "components/dermotology";
+@import "components/aboutus";
+@import "components/values";
+@import "components/doctors";
+@import "components/gallery";
+@import "components/blog";
+@import "components/contacts";
+@import "components/reviews";
+@import "./components/footer";
+

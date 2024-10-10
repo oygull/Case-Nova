@@ -1,0 +1,122 @@
+.doctors{
+  margin-bottom: 180px;
+
+  &__box{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+
+    &--head{
+      display: flex;
+      flex-direction: column;
+      padding-top: 40px;
+
+      h3{
+        font-weight: 800;
+        font-size: 46px;
+        line-height: 50px;
+        margin-bottom: 24px;
+      }
+      p{
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 28px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+        margin-bottom: 40px;
+      }
+
+      &--btns{
+        display: flex;
+        flex-direction: row;
+
+        button{
+          cursor: pointer;
+          border: none;
+          background-color: transparent;
+
+          &:not(:last-child){
+            margin-right: 50px;
+          }
+        }
+      }
+
+      @media screen and (max-width: 768px){
+        h3{
+          font-size: 24px;
+          line-height: 30px;
+          margin-bottom: 6px;
+        }
+        p{
+          font-size: 12px;
+          line-height: 20px;
+          margin-bottom: 25px;
+        }
+
+        &--btns{
+          display: none;
+        }
+      }
+
+    }
+
+    &--desc{
+      padding: 48px 36px;
+      width: 410px;
+      height: auto;
+
+      &:not(:last-child){
+        margin-right: 36px;
+      }
+
+      img{
+        margin-bottom: 16px;
+      }
+
+      p{
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 0.32em;
+        text-transform: uppercase;
+      }
+
+      h3{
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 30px;
+        margin-bottom: 12px;
+      }
+
+      @media screen and (max-width: 768px){
+        p{
+          font-size: 16px;
+          line-height: 22px;
+        }
+        h3{
+          font-size: 20px;
+          line-height: 20px;
+          margin-bottom: 4px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px){
+      &--desc{
+        padding: 0;
+      }
+    }
+  }
+
+  @media screen and (max-width: 768px){
+    &__box{
+      flex-direction: column;
+    }
+  }
+}
+
+@media screen and (max-width: 768px){
+  .doctors{
+    margin-bottom: 30px;
+  }
+}

@@ -1,0 +1,76 @@
+<div class="contacts">
+  <div class="container">
+    <div class="contacts__body">
+      <h2 class="contacts__body__title">Контакты</h2>
+      <p class="contacts__body__text">приходите в гости, записывайтесь на консультацию, или звоните
+        по всем интересующим вас вопросам.</p>
+      <div id="map" style=" margin-bottom: 36px"></div>
+     <div class="contacts__body_info">
+       <div class="contacts__body_info--item">
+         <p>Адрес</p>
+         <h3>Ташкент,
+           проспект Амира Темура, 124В</h3>
+         <button>
+           <img src="img/way.png" alt="contacts"/>
+           <span>Проложить маршрут</span>
+         </button>
+       </div>
+       <div class="contacts__body_info--item">
+         <p>Телефоны</p>
+         <div class="contacts__body_info--item--nums">
+           <a href="tel:+998973404044">+998 97 340 40 44</a>
+           <a href="tel:+998712604044">+998 71 260 40 44</a>
+         </div>
+         <button>
+           <img src="img/message.png" alt="contacts"/>
+           <span>Написать в телеграм</span>
+         </button>
+       </div>
+       <div class="contacts__body_info--socials">
+         <p>Социальные сети</p>
+         <ul class="contacts__body_info--socials--list">
+           <li>
+             <a href="">
+               <img src="img/svg/facebook.svg" alt="contacts"/>
+               <span>Facebook</span>
+             </a>
+           </li>
+           <li>
+             <a href="">
+               <img src="img/svg/instagram.svg" alt="contacts"/>
+               <span>Instagram</span>
+             </a>
+           </li>
+           <li>
+             <a href="">
+               <img src="img/svg/telegram.svg" alt="contacts"/>
+               <span>Telegram</span>
+             </a>
+           </li>
+         </ul>
+       </div>
+     </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+  ymaps.ready(init);
+  function init(){
+    var myMap = new ymaps.Map("map", {
+      center: [41.334776, 69.351379],
+      zoom: 13,
+    }),
+      myPlacemark1 = new ymaps.Placemark([41.334776, 69.351379], {
+        balloonContent: 'Small icon'
+      }, {
+        iconLayout: 'default#image',
+        iconImageClipRect: [[0,0], [26, 47]],
+        iconImageHref: 'images/about/location.png',
+        iconImageSize: [15, 27],
+        iconImageOffset: [-15, -27],
+      });
+
+    myMap.geoObjects.add(myPlacemark1);
+  }
+</script>

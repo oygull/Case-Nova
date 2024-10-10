@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru" class="page">
+
+@include('partials/head.html')
+
+<body class="page__body">
+@include('partials/modal.html')
+<div class="site-container">
+<div class="services-wrap">
+  @include('partials/header.html')
+  @include('partials/service_types.html')
+</div>
+  <div class="footer-wrap">
+    @include('partials/dermatology.html')
+    @include('partials/question_form.html')
+    @include('partials/footer.html')
+  </div>
+</div>
+
+<div class="test blog__body--block">
+  <p data-translate="services"></p>
+  <p data-translate="some"></p>
+  <p data-translate="some2"></p>
+  <button id="changeLang">Change</button>
+</div>
+</body>
+
+</html>
